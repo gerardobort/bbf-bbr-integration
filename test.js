@@ -91,6 +91,8 @@ $('#test-container #submit-bbf').on('click', function () {
     var err;
     if (!(err = form.commit())) {
         console.log('model submitted', form.model);
+        console.log('model\'s head hair color ==', form.model.get('head').get('hair_color'));
+        console.log('model\'s legs count ==', form.model.get('legs').length);
         alert('validation passed, look at the console for details.');
     } else {
         console.log('model err', err);
